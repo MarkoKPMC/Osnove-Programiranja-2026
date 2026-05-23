@@ -88,11 +88,11 @@ def findall(s = "hi", l = "i"):
 # ZADATAK 10 (13.14)
 def promeni_velicinu(s = "Hello World!"):
     new = ""
-    for i in range(len(s)):
-        if s[i] == s[i].upper():
-            new += s[i].lower()
+    for el in s:
+        if el == el.upper():
+            new += el.lower()
         else:
-            new += s[i].upper()
+            new += el.upper()
 
     return new
 
@@ -114,7 +114,7 @@ def one_away(s1 = "bike", s2 = "hike"):
         return False
 
     c = [s1[i] for i in range(len(s1)) if s1[i] != s2[i]]
-    if len(c) > 1:
+    if len(c) != 1:
         return False
     else:
         return True
